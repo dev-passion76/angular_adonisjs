@@ -26,6 +26,7 @@ export default class AuthController {
     await auth.use("web").logout();
     return response
     .send({ message: "Logout successful" });
+    // .clearCookie('adonis-session')
   }
 
   public async users({ response }: HttpContextContract) {
