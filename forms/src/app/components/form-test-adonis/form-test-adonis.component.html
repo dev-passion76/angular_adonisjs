@@ -1,0 +1,30 @@
+<!-- FILEPATH: /d:/angular/introduction/projects/shared/src/lib/components/form-test-adonis/form-test-adonis.component.html -->
+
+<form [formGroup]="myForm">
+  <label>
+    Email:
+    <input type="email" formControlName="email" />
+  </label>
+  <br />
+  <label>
+    Password:
+    <input type="password" formControlName="password" />
+  </label>
+  <br />
+  <button (click)="login()">Login</button>
+  <button (click)="logout()">Logout</button>
+  <button (click)="users()">Users</button>
+</form>
+
+<p>
+  <label>Response API</label>
+  {{ rep | json}}
+</p>
+<p>
+  <label>UserList</label>
+  {{ usersList | json }}
+</p>
+<p>
+  <label>Erreur</label>
+  {{ err }}
+</p>
